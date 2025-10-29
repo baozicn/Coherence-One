@@ -1,0 +1,25 @@
+<UserControl x:Class="CoherenceOne.UI.Controls.TimelineView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d"
+             d:DesignHeight="200" d:DesignWidth="400">
+  <Border Background="{StaticResource Brush.Note}" CornerRadius="{StaticResource CctCorner}" Padding="12">
+    <StackPanel>
+      <TextBlock Text="今日时间线" FontSize="18" FontWeight="SemiBold" Margin="0,0,0,8" />
+      <ItemsControl ItemsSource="{Binding Timeline}">
+        <ItemsControl.ItemTemplate>
+          <DataTemplate>
+            <StackPanel Orientation="Horizontal" Margin="0,2">
+              <TextBlock Text="{Binding Ts, StringFormat=\{0:HH:mm\}}" Width="80" />
+              <TextBlock Text="{Binding Type}" Width="120" />
+              <TextBlock Text="{Binding PayloadJson}" TextWrapping="Wrap" />
+            </StackPanel>
+          </DataTemplate>
+        </ItemsControl.ItemTemplate>
+      </ItemsControl>
+      <Button Content="导出" Command="{Binding ExportTimelineCommand}" Margin="0,12,0,0" HorizontalAlignment="Right" />
+    </StackPanel>
+  </Border>
+</UserControl>

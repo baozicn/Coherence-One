@@ -1,0 +1,25 @@
+<UserControl x:Class="CoherenceOne.UI.Controls.SceneStrip"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d"
+             d:DesignHeight="120" d:DesignWidth="400">
+  <ItemsControl ItemsSource="{Binding Scenes}">
+    <ItemsControl.ItemsPanel>
+      <ItemsPanelTemplate>
+        <StackPanel Orientation="Horizontal" />
+      </ItemsPanelTemplate>
+    </ItemsControl.ItemsPanel>
+    <ItemsControl.ItemTemplate>
+      <DataTemplate>
+        <Border Background="{StaticResource Brush.Card}" CornerRadius="{StaticResource CctCorner}" Margin="4" Padding="12">
+          <StackPanel>
+            <TextBlock Text="{Binding Name}" FontSize="16" FontWeight="SemiBold" />
+            <Button Content="一键启动" Margin="0,8,0,0" Command="{Binding DataContext.LaunchSceneCommand, RelativeSource={RelativeSource AncestorType=ItemsControl}}" CommandParameter="{Binding Id}" />
+          </StackPanel>
+        </Border>
+      </DataTemplate>
+    </ItemsControl.ItemTemplate>
+  </ItemsControl>
+</UserControl>

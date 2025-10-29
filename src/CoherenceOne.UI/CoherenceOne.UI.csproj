@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.1" />
+    <ProjectReference Include="..\CoherenceOne.Core\CoherenceOne.Core.csproj" />
+    <ProjectReference Include="..\CoherenceOne.Data\CoherenceOne.Data.csproj" />
+  </ItemGroup>
+</Project>
