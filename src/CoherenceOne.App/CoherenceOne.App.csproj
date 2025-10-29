@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <StartupObject>CoherenceOne.App.App</StartupObject>
+    <ApplicationIcon>Assets/app.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
+    <ProjectReference Include="..\CoherenceOne.UI\CoherenceOne.UI.csproj" />
+    <ProjectReference Include="..\CoherenceOne.Services\CoherenceOne.Services.csproj" />
+    <ProjectReference Include="..\CoherenceOne.Core\CoherenceOne.Core.csproj" />
+    <ProjectReference Include="..\CoherenceOne.Data\CoherenceOne.Data.csproj" />
+  </ItemGroup>
+</Project>

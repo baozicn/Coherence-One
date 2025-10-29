@@ -1,0 +1,57 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31912.275
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoherenceOne.App", "src\CoherenceOne.App\CoherenceOne.App.csproj", "{0A5BBF48-9E5C-4FC5-8AF0-8C253B05EAAE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoherenceOne.UI", "src\CoherenceOne.UI\CoherenceOne.UI.csproj", "{47B6A2EB-4FCE-4D63-AC3C-5612E5EAEF6D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoherenceOne.Core", "src\CoherenceOne.Core\CoherenceOne.Core.csproj", "{7E4A9F3C-0EE5-48E0-BC8B-508E497438CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoherenceOne.Services", "src\CoherenceOne.Services\CoherenceOne.Services.csproj", "{3AAE7CE7-3495-4DE6-91D2-5D978F5E85B2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoherenceOne.Data", "src\CoherenceOne.Data\CoherenceOne.Data.csproj", "{3D95512E-C75D-4D10-BC5E-AC227DD21C2D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoherenceOne.Tests", "tests\CoherenceOne.Tests\CoherenceOne.Tests.csproj", "{40E3BF62-659A-446F-9F73-7D4A0F117A6E}"
+EndProject
+Project("{C7167F0D-BC9F-4E6E-AFE1-012C56B48DB5}") = "CoherenceOne.Package", "packaging\CoherenceOne.Package\CoherenceOne.Package.wapproj", "{B4A6E56F-4E85-4ACF-91B5-6CD5A4912345}"
+EndProject
+Global
+GlobalSection(SolutionConfigurationPlatforms) = preSolution
+Debug|Any CPU = Debug|Any CPU
+Release|Any CPU = Release|Any CPU
+EndGlobalSection
+GlobalSection(ProjectConfigurationPlatforms) = postSolution
+{0A5BBF48-9E5C-4FC5-8AF0-8C253B05EAAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+{0A5BBF48-9E5C-4FC5-8AF0-8C253B05EAAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+{0A5BBF48-9E5C-4FC5-8AF0-8C253B05EAAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+{0A5BBF48-9E5C-4FC5-8AF0-8C253B05EAAE}.Release|Any CPU.Build.0 = Release|Any CPU
+{47B6A2EB-4FCE-4D63-AC3C-5612E5EAEF6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+{47B6A2EB-4FCE-4D63-AC3C-5612E5EAEF6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+{47B6A2EB-4FCE-4D63-AC3C-5612E5EAEF6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+{47B6A2EB-4FCE-4D63-AC3C-5612E5EAEF6D}.Release|Any CPU.Build.0 = Release|Any CPU
+{7E4A9F3C-0EE5-48E0-BC8B-508E497438CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+{7E4A9F3C-0EE5-48E0-BC8B-508E497438CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+{7E4A9F3C-0EE5-48E0-BC8B-508E497438CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+{7E4A9F3C-0EE5-48E0-BC8B-508E497438CE}.Release|Any CPU.Build.0 = Release|Any CPU
+{3AAE7CE7-3495-4DE6-91D2-5D978F5E85B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+{3AAE7CE7-3495-4DE6-91D2-5D978F5E85B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+{3AAE7CE7-3495-4DE6-91D2-5D978F5E85B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+{3AAE7CE7-3495-4DE6-91D2-5D978F5E85B2}.Release|Any CPU.Build.0 = Release|Any CPU
+{3D95512E-C75D-4D10-BC5E-AC227DD21C2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+{3D95512E-C75D-4D10-BC5E-AC227DD21C2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+{3D95512E-C75D-4D10-BC5E-AC227DD21C2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+{3D95512E-C75D-4D10-BC5E-AC227DD21C2D}.Release|Any CPU.Build.0 = Release|Any CPU
+{40E3BF62-659A-446F-9F73-7D4A0F117A6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+{40E3BF62-659A-446F-9F73-7D4A0F117A6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+{40E3BF62-659A-446F-9F73-7D4A0F117A6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+{40E3BF62-659A-446F-9F73-7D4A0F117A6E}.Release|Any CPU.Build.0 = Release|Any CPU
+{B4A6E56F-4E85-4ACF-91B5-6CD5A4912345}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+{B4A6E56F-4E85-4ACF-91B5-6CD5A4912345}.Debug|Any CPU.Build.0 = Debug|Any CPU
+{B4A6E56F-4E85-4ACF-91B5-6CD5A4912345}.Release|Any CPU.ActiveCfg = Release|Any CPU
+{B4A6E56F-4E85-4ACF-91B5-6CD5A4912345}.Release|Any CPU.Build.0 = Release|Any CPU
+EndGlobalSection
+GlobalSection(SolutionProperties) = preSolution
+HideSolutionNode = FALSE
+EndGlobalSection
+EndGlobal
