@@ -1,0 +1,106 @@
+<Window x:Class="LiteFocus.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="LiteFocus 专注助手" Height="560" Width="760" ResizeMode="CanMinimize"
+        WindowStartupLocation="CenterScreen" Background="{StaticResource SoftBgBrush}">
+    <DockPanel>
+        <!-- 顶部栏 -->
+        <Border DockPanel.Dock="Top" Background="#FFFFFF" BorderBrush="{StaticResource CardBorderBrush}" BorderThickness="0,0,0,1">
+            <Grid Margin="12,8">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="LiteFocus 专注助手" Style="{StaticResource TitleText}"/>
+                    <TextBlock Text="｜轻量番茄 + 清屏聚焦" Foreground="{StaticResource SecondaryTextBrush}" VerticalAlignment="Center" Margin="10,0,0,0"/>
+                </StackPanel>
+                <StackPanel Grid.Column="1" Orientation="Horizontal">
+                    <ComboBox x:Name="SceneCombo" Width="160" Margin="0,0,8,0"/>
+                    <Button Style="{StaticResource PrimaryButton}" Click="ActivateScene_Click">启动场景</Button>
+                    <Button Style="{StaticResource SecondaryButton}" Click="ClearScreenNow_Click">清屏聚焦</Button>
+                    <Button Style="{StaticResource SecondaryButton}" Click="RestoreAll_Click">恢复窗口</Button>
+                </StackPanel>
+            </Grid>
+        </Border>
+
+        <!-- 主体 -->
+        <Grid Margin="12">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- 左侧：番茄钟卡片 -->
+            <Border Style="{StaticResource Card}" Grid.Column="0">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <!-- 阶段信息 -->
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,4,0,8">
+                        <TextBlock Text="阶段" VerticalAlignment="Center"/>
+                        <TextBlock x:Name="PhaseText" FontWeight="Bold" Margin="6,0"/>
+                        <TextBlock Text="｜下一长休" VerticalAlignment="Center"/>
+                        <TextBlock x:Name="LongBreakHint"/>
+                    </StackPanel>
+
+                    <!-- 中心圆形计时 -->
+                    <Grid Grid.Row="1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid>
+                            <Border Width="260" Height="260" CornerRadius="140" Background="#F3F7FF" BorderBrush="#E0E8F5" BorderThickness="1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            <TextBlock x:Name="TimerText" FontSize="64" FontWeight="Bold" Foreground="#263238" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Grid>
+
+                        <!-- 控制按钮 -->
+                        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,12,0,0">
+                            <Button Style="{StaticResource PrimaryButton}" Click="StartPause_Click" x:Name="StartPauseBtn">开始</Button>
+                            <Button Style="{StaticResource SecondaryButton}" Click="Reset_Click">重置</Button>
+                            <Button Style="{StaticResource SecondaryButton}" Click="SkipPhase_Click">跳过</Button>
+                        </StackPanel>
+                    </Grid>
+
+                    <!-- 状态与辅助开关 -->
+                    <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,8,0,0">
+                        <CheckBox x:Name="FullScreenProtect" Content="全屏保护" Margin="8,0"/>
+                        <CheckBox x:Name="AutoClearEnabled" Content="自动清屏" Margin="8,0" IsChecked="True"/>
+                        <Button Style="{StaticResource SecondaryButton}" Click="Allow60s_Click">社交紧急60秒</Button>
+                        <Button Style="{StaticResource SecondaryButton}" Click="ExportCsv_Click">导出今日CSV</Button>
+                    </StackPanel>
+                </Grid>
+            </Border>
+
+            <!-- 右侧：信息与清单 -->
+            <StackPanel Grid.Column="1">
+                <Border Style="{StaticResource Card}">
+                    <StackPanel>
+                        <TextBlock Text="专注状态" Style="{StaticResource TitleText}"/>
+                        <TextBlock x:Name="StatusText" Foreground="{StaticResource SecondaryTextBrush}" Margin="0,6,0,0"/>
+                        <StackPanel Orientation="Horizontal" Margin="0,8,0,0">
+                            <TextBlock Text="距上次QQ："/>
+                            <TextBlock x:Name="QQSinceText" FontWeight="SemiBold"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="0,4,0,0">
+                            <TextBlock Text="距上次微信："/>
+                            <TextBlock x:Name="WeChatSinceText" FontWeight="SemiBold"/>
+                        </StackPanel>
+                    </StackPanel>
+                </Border>
+
+                <Border Style="{StaticResource Card}">
+                    <StackPanel>
+                        <TextBlock Text="上次清屏的窗口（仅记录当时已显示的）" Foreground="{StaticResource SecondaryTextBrush}"/>
+                        <ListBox x:Name="ClearedList" Height="140" Margin="0,6,0,0"/>
+                    </StackPanel>
+                </Border>
+            </StackPanel>
+        </Grid>
+    </DockPanel>
+</Window>

@@ -1,0 +1,32 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LiteFocus", "LiteFocus", "{678E4838-814F-E7C9-5E4E-A1EDD6A66DC0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{976E0489-97F3-9B13-DAB2-85743D704FF5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LiteFocus", "LiteFocus\src\LiteFocus\LiteFocus.csproj", "{F09911DA-DF21-C856-9965-D122184D9B43}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F09911DA-DF21-C856-9965-D122184D9B43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F09911DA-DF21-C856-9965-D122184D9B43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F09911DA-DF21-C856-9965-D122184D9B43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F09911DA-DF21-C856-9965-D122184D9B43}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{976E0489-97F3-9B13-DAB2-85743D704FF5} = {678E4838-814F-E7C9-5E4E-A1EDD6A66DC0}
+		{F09911DA-DF21-C856-9965-D122184D9B43} = {976E0489-97F3-9B13-DAB2-85743D704FF5}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AFC8659E-C3C9-4C60-A2BD-0EBE8C92F9BC}
+	EndGlobalSection
+EndGlobal
